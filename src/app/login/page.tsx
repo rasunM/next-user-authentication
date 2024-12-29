@@ -63,7 +63,9 @@ export default function LoginPage() {
           setUser({...user, password: e.target.value})
         }}
         placeholder="password"/>
-        <button onClick={onLogin} className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">Login Here</button>
+        <button onClick={onLogin} className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">
+          {buttonDisabled ? "Nothing to Do" : "LogIn Here"}
+        </button>
         <Link href="/signup">Visit SignUp Page</Link>
     </div>
   )
